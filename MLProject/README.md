@@ -5,25 +5,28 @@ This document provides an overview of the directory structure and key components
 ## Directory Structure
 
 ```
-Loanapp
-├── config/
-│   ├── __init__.py
-│   └── config.py
-├── datasets/
-│   ├── loanTrain.csv
-│   └── test_loan.csv
-├── processing/
-│   ├── __init__.py
-│   ├── data_handling.py
-│   └── preprocessing.py
-├── trained_models/
-│   └── classification.pkl
-├── VERSION
-├── __init__.py
-├── pipeline.py
-├── predict.py
-├── training_pipeline.py
-├── MANIFEST.in
+MLProject
+├──Loanapp
+    ├── config/
+    │   ├── __init__.py
+    │   └── config.py
+    ├── datasets/
+    │   ├── loanTrain.csv
+    │   └── test_loan.csv
+    ├── processing/
+    │   ├── __init__.py
+    │   ├── data_handling.py
+    │   └── preprocessing.py
+    ├── trained_models/
+    │   └── classification.pkl
+    ├── VERSION
+    ├── __init__.py
+    ├── pipeline.py
+    ├── predict.py
+    ├── training_pipeline.py
+    ├── MANIFEST.in
+├──tests
+    ├──test_predictions.py
 ├── README.md
 ├── requirements.txt
 └── setup.py
