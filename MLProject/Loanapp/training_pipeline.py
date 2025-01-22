@@ -1,6 +1,12 @@
 import numpy as np
 import pandas as pd
 
+import sys
+import os
+config_root = os.path.dirname(os.path.abspath(__file__))
+#print(config_root)
+sys.path.append(config_root)
+
 from config import config
 from processing.data_handling import load_data,save_pipeline
 import processing.data_preprocessing as pp

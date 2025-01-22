@@ -1,21 +1,23 @@
 import os
 from setuptools import find_packages, setup
 
-# Metadata of package
+#Metadata of package
+
 NAME = 'Loanapp'
-DESCRIPTION = 'Loan Prediction Model'
-URL = 'https://github.com/aicouncil/'
+DESCRIPTION = 'Loanapp_prediction_model'
+URL = 'https://github.com/aicouncil'
 EMAIL = 'info@aicouncil.in'
-AUTHOR = 'AiCouncil'
+AUTHOR = 'Aicouncil'
 REQUIRES_PYTHON = '>=3.7.0'
 
 pwd = os.path.abspath(os.path.dirname(__file__))
+#print(pwd)
 
-# Get the list of packages to be installed
-def list_reqs(fname='requirements.txt'):
-    with open(os.path.join(pwd, fname), encoding='utf-8') as f:
+#get the list of packages to be installed
+def list_reqs(fname = 'requirements.txt'):
+    with open(os.path.join(pwd,fname)) as f:
         return [line.strip() for line in f if line.strip() and not line.startswith('#')]
-
+    
 # Read the README file
 try:
     with open(os.path.join(pwd, 'README.md'), encoding='utf-8') as f:
@@ -23,9 +25,11 @@ try:
 except FileNotFoundError:
     long_description = DESCRIPTION
 
-# Load the package's __version__.py module as a dictionary
+#Load the packages's version 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 PACKAGE_DIR = os.path.join(ROOT_DIR, NAME)
+#print(PACKAGE_DIR)
+
 
 about = {}
 try:
@@ -33,6 +37,7 @@ try:
         about['__version__'] = f.read().strip()
 except FileNotFoundError:
     raise RuntimeError("VERSION file not found. Ensure it exists in the package directory.")
+
 
 setup(
     name=NAME,
@@ -45,7 +50,7 @@ setup(
     python_requires=REQUIRES_PYTHON,
     url=URL,
     packages=find_packages(exclude=('tests',)),
-    package_data={'prediction_model': ['VERSION']},
+    package_data={'loanapp_prediction_model': ['VERSION']},
     install_requires=list_reqs(),
     extras_require={},
     include_package_data=True,
