@@ -25,6 +25,7 @@ def generate_predictions():
 def generate_predictions(data_input):
     try:
         data = pd.DataFrame(data_input , columns = config.FEATURES)
+        #print(data)
     except Exception as e:
         print(e)
 
@@ -38,5 +39,9 @@ def generate_predictions(data_input):
     return result
 
 
-if __name__ == '__main__':
-    generate_predictions()
+#if __name__ == '__main__':
+    #data_input = [['Male','Yes','0','Graduate','No',5720,0,110,360,1,'Urban']]
+    #data_input = load_data(config.TEST_FILE)
+    #print(data_input[:1])
+    #print(generate_predictions(data_input))
+    #generate_predictions()
